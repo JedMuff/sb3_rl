@@ -1,0 +1,185 @@
+PPO_PegBox-v0
+------------- 
+Command:
+srun python rl_multicore.py --model PPO_PegBox-v0 --algorithm PPO --ts 8000000 --env PegBox-v0 --cpus 16
+
+Processing Time: 2:02:05.948497
+
+Job ID: 5403985
+Cluster: triton
+User/Group: muffj1/muffj1
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 17:48:31
+CPU Efficiency: 54.31% of 1-08:47:28 core-walltime
+Job Wall-clock time: 02:02:58
+Memory Utilized: 5.98 GB
+Memory Efficiency: 74.76% of 8.00 GB
+
+PPO_RandomPegBox-v0
+------------- 
+srun python rl_multicore.py --model PPO_RandomPegBox-v0 --algorithm PPO --ts 8000000 --env RandomPegBox-v0 --cpus 16
+
+Processing Time: 1:44:46.619253
+
+Job ID: 5423143
+Cluster: triton
+User/Group: muffj1/muffj1
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 17:54:37
+CPU Efficiency: 63.51% of 1-04:12:00 core-walltime
+Job Wall-clock time: 01:45:45
+Memory Utilized: 5.98 GB
+Memory Efficiency: 74.75% of 8.00 GB
+
+PPO_RandomPegCylinder-v0 (without randomness)
+---------------------------------------------
+srun python rl_multicore.py --model PPO_RandomPegCylinder-v0 --algorithm PPO --ts 16000000 --env RandomPegCylinder-v0 --cpus 16
+Processing Time: 3:31:14.516630
+
+
+
+------------------------------------------------
+#!/bin/bash
+#SBATCH --time=15:00:00
+#SBATCH --ntasks=1
+#SBATCH --mem=10G
+#SBATCH --cpus-per-task=16
+#SBATCH --output=rl.out
+
+module load miniconda
+source activate pg
+module load mesa/21.2.3-opengl-osmesa-python3-llvm
+module load mujoco/2.1.0
+
+#srun python rl_multicore.py --model PPO_RandomPegBox-v-1-2 --algorithm PPO --ts 8000000 --env RandomPegBox-v0 --cpus 16
+srun python rl_multicore.py --model PPO_PandaReach-PosCtrl-v0 --algorithm PPO --ts 8000000 --env PandaReach-PosCtrl-v0 --cpus 16
+srun python rl_multicore.py --model PPO_RandomPegCylinder-v0 --algorithm PPO --ts 8000000 --env RandomPegCylinder-v0 --cpus 16
+srun python rl_multicore.py --model PPO_PandaHockey-v0 --algorithm PPO --ts 8000000 --env PandaHockey-v0 --cpus 16
+
+
+Job ID: 6419501
+Cluster: triton
+User/Group: muffj1/muffj1
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-07:14:11
+CPU Efficiency: 21.77% of 5-23:30:56 core-walltime
+Job Wall-clock time: 08:58:11
+Memory Utilized: 7.08 GB
+Memory Efficiency: 70.76% of 10.00 GB
+
+
+2 passed(PPO_RandomPegCylinder-v0, PPO_PandaReach-PosCtrl-v0), 1 failed(PPO_PandaHockey-v0) - error:
+
+  logger.warn(
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/panda-gym/rl/rl_multicore.py", line 46, in <module>
+    model.learn(n_timesteps, callback=callback)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 304, in learn
+    return super(PPO, self).learn(
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 169, in collect_rollouts
+    actions, values, log_probs = self.policy(obs_tensor)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/policies.py", line 592, in forward
+    distribution = self._get_action_dist_from_latent(latent_pi)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/policies.py", line 607, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/distributions.py", line 152, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/distributions/normal.py", line 50, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (16, 7)) of distribution Normal(loc: torch.Size([16, 7]), scale: torch.Size([16, 7])) to satisfy the constraint Real(), but found invalid values:
+tensor([[-0.0014, -0.0199,  0.0233, -0.0221, -0.0614, -0.0965,  0.0212],
+        [ 0.0109,  0.1181,  0.0960, -0.0884, -0.0537,  0.0401,  0.1048],
+        [-0.0132, -0.0042, -0.0711,  0.0830,  0.0817,  0.0730,  0.0650],
+        [-0.0677, -0.0308,  0.0674, -0.0766,  0.0609, -0.0294, -0.0430],
+        [-0.0335,  0.0740,  0.0267,  0.0395,  0.0111,  0.0540,  0.0101],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [ 0.0913,  0.0089, -0.0182,  0.0033,  0.0036,  0.0743,  0.0866],
+        [ 0.1340,  0.1188,  0.0635,  0.0709,  0.0313, -0.0014,  0.0685],
+        [ 0.0194,  0.0448,  0.0283,  0.0590, -0.0359, -0.0048, -0.0454],
+        [-0.0350,  0.0470, -0.0054,  0.0050,  0.0360,  0.1005,  0.0479],
+        [-0.0611,  0.1067, -0.0169, -0.0536,  0.0956,  0.0042,  0.0542],
+        [ 0.0732, -0.0566, -0.0562, -0.0051, -0.0737, -0.0657, -0.0450],
+        [ 0.0127,  0.1006, -0.0268, -0.0551,  0.0938, -0.0512,  0.0258],
+        [ 0.0244,  0.0753,  0.0504, -0.0395, -0.0027,  0.0094, -0.0145],
+        [-0.0687, -0.0169, -0.0191, -0.0939, -0.0194,  0.0250, -0.0262],
+        [-0.1392, -0.0483, -0.0626, -0.0778, -0.0556,  0.0033, -0.0802]])
+srun: error: csl3: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6419501.2
+
+-----------------------------------------
+srun python rl_multicore.py --model PPO_PandaHockey-v0 --algorithm PPO --ts 8000000 --env PandaHockey-v0 --cpus 16
+failed with same error message as before
+srun python rl_multicore.py --model PPO_PandaHockey-Dpos-v0 --algorithm PPO --ts 8000000 --env PandaHockey-Dpos-v0 --cpus 16
+took 15 hours and still didnt finish
+
+State: TIMEOUT (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 23:24:34
+CPU Efficiency: 9.70% of 10-01:26:08 core-walltime
+Job Wall-clock time: 15:05:23
+Memory Utilized: 6.04 GB
+Memory Efficiency: 60.39% of 10.00 GB
+
+------------------------------
+srun python rl_multicore.py --model PPO_PandaHockey-Dvel-v0 --algorithm PPO --ts 8000000 --env PandaHockey-Dvel-v0 --cpus 16
+
+ran for 15 hours and ran out of time
+
+---------------------------------
+srun python rl_multicore.py --model PPO_PandaBall-Random-PosCtrl-v0 --algorithm PPO --ts 8000000 --env PandaBall-Random-PosCtrl-v0 --cpus 16
+passed
+srun python rl_multicore.py --model PPO_PandaBall-v0 --algorithm PPO --ts 8000000 --env PandaBall-v0 --cpus 16
+ValueError: Expected parameter loc (Tensor of shape (16, 4)) of distribution Normal(loc: torch.Size([16, 4]), scale: torch.Size([16, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[-1.5135,  0.2949,  0.3517, -0.1977],
+        [ 0.2454, -0.0983,  0.0326, -0.1988],
+        [-0.1486,  0.1055,  0.0966,  0.0573],
+        [-1.3587,  0.5963,  0.1881, -0.1239],
+        [-1.3563,  0.7026,  0.0919, -0.1254],
+        [-1.4278,  0.2946,  0.3392, -0.1807],
+        [-1.4257,  0.6678,  0.0344, -0.1872],
+        [-1.4303,  0.4604,  0.1599, -0.1852],
+        [-1.2807,  0.1783,  0.2685, -0.1730],
+        [-0.7504,  0.6223,  0.0688,  0.0464],
+        [-0.4757,  0.3055,  0.0615,  0.0308],
+        [-1.4340,  0.2305,  0.3332, -0.2020],
+        [ 0.2664, -0.0191,  0.0128,  0.0110],
+        [-0.6600,  0.0175, -0.0142, -0.1854],
+        [ 1.0201, -0.2438, -0.2285, -0.0752],
+        [    nan,     nan,     nan,     nan]])
+srun: error: c593: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6450569.1
+
+srun python rl_multicore.py --model PPO_PandaBasketball-Dvel-v0 --algorithm PPO --ts 8000000 --env PandaBasketball-Dvel-v0 --cpus 16
+timed out
+
+---------------------------------------------
+
+srun python rl_multicore.py --model PPO_PandaBall-v0 --algorithm PPO --ts 8000000 --env PandaBall-v0 --cpus 16
+Processing Time: 4:02:12.103302
+Job ID: 6517692
+Cluster: triton
+User/Group: muffj1/muffj1
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-05:43:25
+CPU Efficiency: 45.82% of 2-16:52:32 core-walltime
+Job Wall-clock time: 04:03:17
+Memory Utilized: 4.54 GB
+Memory Efficiency: 45.35% of 10.00 GB
+
+Get a dodgey model
+
