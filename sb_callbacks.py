@@ -2,6 +2,7 @@ from stable_baselines3.common.callbacks import BaseCallback
 import csv
 import pandas as pd
 import os
+import numpy as np
 
 class CustomCallback(BaseCallback):
 
@@ -15,6 +16,7 @@ class CustomCallback(BaseCallback):
 
         self.policy_step_data = pd.DataFrame()
         self.policy_data = pd.DataFrame()
+        self.prev_val = 0
 
     def _on_step(self) -> bool:
         all_data = self.training_env.env_method('get_step_info')
@@ -24,6 +26,7 @@ class CustomCallback(BaseCallback):
 
             data = info.copy()
             data['net_reward'] = reward
+            
             self.policy_step_data = pd.concat([self.policy_step_data, pd.DataFrame([data])], ignore_index=True)
 
         return True
@@ -32,15 +35,15 @@ class CustomCallback(BaseCallback):
 
         # Average columns
         df_mean = pd.DataFrame(self.policy_step_data.mean()).T
+        goals_reached = np.sum(self.training_env.get_attr('goal_reached_count'))
+        df_mean['goals_reached'] = goals_reached - self.prev_val
 
         # Concat with policy_data
         self.policy_data = pd.concat([self.policy_data, df_mean])
 
-        # Take the last value of goal_reached column
-        self.policy_data.iloc[-1, self.policy_data.columns.get_loc('goal_reached')] = self.policy_step_data['goal_reached'].iat[-1]
-
         # Reset data collection
         self.policy_step_data = pd.DataFrame()
+        self.prev_val = goals_reached
 
     def _on_training_end(self) -> None:
         self.policy_data.to_csv(self.dir_file_csv)

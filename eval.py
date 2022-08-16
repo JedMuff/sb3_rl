@@ -13,7 +13,7 @@ parser.add_argument("--render", action=argparse.BooleanOptionalAction, help="If 
 parser.add_argument("--model", type=str, default="PPO_PegBox-v0", help="model name to use, e.g. type model_name in models/model_name")
 parser.add_argument("--algorithm", type=str, default="PPO", help="Type of algorithm to use:\
     A2C, DDPG, DQN, PPO, SAC, TD3")
-parser.add_argument("--ts", type=int, default=25000, help="Number of timesteps the RL algorithm trains for")
+parser.add_argument("--ts", type=int, default=5000, help="Number of timesteps the RL algorithm trains for")
 parser.add_argument("--env", type=str, default="PegBox-v0", help="Enviroment to use")
 parser.add_argument("--init", action=argparse.BooleanOptionalAction, default=True, help="Enviroment to use")
 parser.add_argument("--random", action=argparse.BooleanOptionalAction, default=False, help="Enviroment is random?")

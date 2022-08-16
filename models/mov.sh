@@ -1,2 +1,2 @@
 #!/bin/bash  
-cp -v -r ~/triton_files/* /home/Jed/pandaGym/panda-gym/rl/models/
+cp -v -r ~/triton_files/* /home/Jed/pandaGym/sb3_rl/models/

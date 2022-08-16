@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     model = algorithm("MlpPolicy", vec_env, verbose=0)
 
-    print('Training starting...')
+    print(f'Training starting for model {args.model}...')
     start_time = time.time()
     model.learn(n_timesteps, callback=callback)
     total_time = time.time() - start_time
