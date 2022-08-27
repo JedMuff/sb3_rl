@@ -14,9 +14,13 @@ class CustomCallback(BaseCallback):
         if not(os.path.isdir(path)):
             os.mkdir(path)
 
-        self.policy_step_data = pd.DataFrame()
-        self.policy_data = pd.DataFrame()
-        self.prev_val = 0
+        # Data collected on step and reset on rollout
+        self.step_data = pd.DataFrame()
+
+        # Data collected on rollout and saved on training end
+        self.mean_rollout_data = pd.DataFrame()
+        self.std_rollout_data = pd.DataFrame()
+        self.rollout_goal_reached_accuracy = pd.DataFrame()
 
     def _on_step(self) -> bool:
         all_data = self.training_env.env_method('get_step_info')
@@ -27,23 +31,34 @@ class CustomCallback(BaseCallback):
             data = info.copy()
             data['net_reward'] = reward
             
-            self.policy_step_data = pd.concat([self.policy_step_data, pd.DataFrame([data])], ignore_index=True)
+            self.step_data = pd.concat([self.step_data, pd.DataFrame([data])], ignore_index=True)
 
         return True
 
     def _on_rollout_end(self) -> None:
 
-        # Average columns
-        df_mean = pd.DataFrame(self.policy_step_data.mean()).T
-        goals_reached = np.sum(self.training_env.get_attr('goal_reached_count'))
-        df_mean['goals_reached'] = goals_reached - self.prev_val
+        # Remove goal_reached_col
+        goal_reached_col = self.step_data.pop('goal_reached')
 
-        # Concat with policy_data
-        self.policy_data = pd.concat([self.policy_data, df_mean])
+        # Average columns
+        df_mean = pd.DataFrame(self.step_data.mean()).T
+        df_std = pd.DataFrame(self.step_data.std()).T
+
+        # preprocess goal_reached_col
+        goal_reached_col.dropna(inplace=True)
+        total_attempts = goal_reached_col.shape[0]
+        hits = goal_reached_col.sum()
+        percentage_goals_reached = pd.DataFrame([{'percentage_goals_reached' : hits / total_attempts}])
+
+        # Concat with rollout_data
+        self.mean_rollout_data = pd.concat([self.mean_rollout_data, df_mean])
+        self.std_rollout_data = pd.concat([self.std_rollout_data, df_std])
+        self.rollout_goal_reached_accuracy = pd.concat([self.rollout_goal_reached_accuracy, percentage_goals_reached])
 
         # Reset data collection
-        self.policy_step_data = pd.DataFrame()
-        self.prev_val = goals_reached
+        self.step_data = pd.DataFrame()
 
     def _on_training_end(self) -> None:
-        self.policy_data.to_csv(self.dir_file_csv)
+        self.mean_rollout_data.to_csv('mean_'+self.dir_file_csv)
+        self.std_rollout_data.to_csv('std_'+self.dir_file_csv)
+        self.rollout_goal_reached_accuracy.to_csv('goals_'+self.dir_file_csv)
