@@ -1,33 +1,71 @@
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
-  logger.warn(
-Processing Time: 1:44:46.619253
+1/4: Making Vector Enviroment for PPO_RandomPandaSwingPeg-v0, Time: 0...
+2/4: Making model for PPO_PandaSwingPeg-v0, Time: 0:00:00.615569...
+3/4: Training starting for model PPO_PandaSwingPeg-v0, Time: 0:00:00.892809...
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/sb3_rl/rl_multicore.py", line 61, in <module>
+    model.learn(n_timesteps, callback=callback)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 304, in learn
+    return super(PPO, self).learn(
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 169, in collect_rollouts
+    actions, values, log_probs = self.policy(obs_tensor)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/policies.py", line 592, in forward
+    distribution = self._get_action_dist_from_latent(latent_pi)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/policies.py", line 607, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/distributions.py", line 152, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/distributions/normal.py", line 50, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (16, 7)) of distribution Normal(loc: torch.Size([16, 7]), scale: torch.Size([16, 7])) to satisfy the constraint Real(), but found invalid values:
+tensor([[    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [ 0.2191,  0.8844,  0.0199, -0.8198,  0.3789, -0.0778, -2.3974],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [-1.0615,  0.0047, -0.0381,  0.4951,  0.8957,  0.4807,  1.9903],
+        [-0.7468,  0.5478, -0.5787,  0.2964,  0.1240, -0.7849,  2.5025],
+        [-0.5748,  0.0968, -0.2920, -0.4152, -0.0032, -0.3620,  2.2893],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [    nan,     nan,     nan,     nan,     nan,     nan,     nan],
+        [-0.8247,  0.6178, -0.0476,  0.4693,  0.7217,  1.2385,  1.7765],
+        [ 0.1755,  0.9068, -0.0552, -0.7325,  0.5191, -0.0782, -2.3936],
+        [ 1.6861,  1.8224,  0.3912, -0.2502,  0.6204, -1.3023, -0.0800]])
+srun: error: csl13: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6600014.0
+Job ID: 6600014
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 04:31:54
+CPU Efficiency: 45.66% of 09:55:28 core-walltime
+Job Wall-clock time: 00:37:13
+Memory Utilized: 4.46 GB
+Memory Efficiency: 44.56% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
+2/4: Making model for PPO_RandomPandaSwingPeg-v0, Time: 0:00:01.037568...
+3/4: Training starting for model PPO_RandomPandaSwingPeg-v0, Time: 0:00:01.298807...
+4/4: Training completed. Processing Time: 4:38:50.830801
+Time since start: 4:38:52.129635
+Job ID: 6600017
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-12:43:27
+CPU Efficiency: 49.23% of 3-02:35:28 core-walltime
+Job Wall-clock time: 04:39:43
+Memory Utilized: 4.59 GB
+Memory Efficiency: 45.94% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,18 @@
+1/4: Making Vector Enviroment for PPO_RandomPegCylinder-PosCtrl-v0, Time: 0...
+2/4: Making model for PPO_RandomPegCylinder-PosCtrl-v0, Time: 0:00:00.590694...
+3/4: Training starting for model PPO_RandomPegCylinder-PosCtrl-v0, Time: 0:00:00.675846...
+4/4: Training completed. Processing Time: 3:43:33.564052
+Time since start: 3:43:34.239937
+Job ID: 6638813
+Array Job ID: 6638811_21
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-01:02:50
+CPU Efficiency: 41.87% of 2-11:49:20 core-walltime
+Job Wall-clock time: 03:44:20
+Memory Utilized: 4.53 GB
+Memory Efficiency: 45.28% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/sb3_rl/rl_multicore.py", line 5, in <module>
+    from sb_callbacks import CustomCallback
+  File "/scratch/work/muffj1/sb3_rl/sb_callbacks.py", line 22
+    `        self.mean_rollout_data = pd.DataFrame()
+    ^
+SyntaxError: invalid syntax
+srun: error: pe78: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6998421.0
+Job ID: 6998421
+Array Job ID: 6998318_3
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:04
+CPU Efficiency: 0.71% of 00:09:20 core-walltime
+Job Wall-clock time: 00:00:35
+Memory Utilized: 1.32 MB
+Memory Efficiency: 0.01% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

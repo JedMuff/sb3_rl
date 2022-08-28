@@ -1,0 +1,20 @@
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py:216: UserWarning: [33mWARN: Overriding environment PandaReach-pen0.2-v0[0m
+  logger.warn("Overriding environment {}".format(id))
+1/4: Making Vector Enviroment for PPO_PandaReach-ImpCtrl-pen2-v0, Time: 0...
+2/4: Making model for PPO_PandaReach-ImpCtrl-pen2-v0, Time: 0:00:00.609694...
+3/4: Training starting for model PPO_PandaReach-ImpCtrl-pen2-v0, Time: 0:00:00.993390...
+4/4: Training completed. Processing Time: 3:20:20.180605
+Time since start: 3:20:21.174046
+Job ID: 6676377
+Array Job ID: 6676377_15
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-00:57:45
+CPU Efficiency: 46.44% of 2-05:45:20 core-walltime
+Job Wall-clock time: 03:21:35
+Memory Utilized: 4.39 GB
+Memory Efficiency: 43.89% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,18 @@
+1/4: Making Vector Enviroment for PPO_PandaReach-pen0.4-v0, Time: 0...
+2/4: Making model for PPO_PandaReach-pen0.4-v0, Time: 0:00:00.609325...
+3/4: Training starting for model PPO_PandaReach-pen0.4-v0, Time: 0:00:00.882014...
+4/4: Training completed. Processing Time: 3:48:04.277031
+Time since start: 3:48:05.159097
+Job ID: 6676387
+Array Job ID: 6676387_11
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-06:15:26
+CPU Efficiency: 49.57% of 2-13:02:08 core-walltime
+Job Wall-clock time: 03:48:53
+Memory Utilized: 4.40 GB
+Memory Efficiency: 44.00% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

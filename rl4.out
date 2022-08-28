@@ -1,0 +1,17 @@
+1/4: Making Vector Enviroment for PPO_PandaFindBox-v0, Time: 0...
+2/4: Making model for PPO_PandaFindBox-v0, Time: 0:00:00.669178...
+3/4: Training starting for model PPO_PandaFindBox-v0, Time: 0:00:00.918263...
+4/4: Training completed. Processing Time: 4:26:53.641773
+Time since start: 4:26:54.560093
+Job ID: 6622581
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-05:18:55
+CPU Efficiency: 41.05% of 2-23:25:04 core-walltime
+Job Wall-clock time: 04:27:49
+Memory Utilized: 4.53 GB
+Memory Efficiency: 45.29% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

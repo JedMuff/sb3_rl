@@ -1,0 +1,18 @@
+1/4: Making Vector Enviroment for PPO_PandaReach-trqua3-v0, Time: 0...
+2/4: Making model for PPO_PandaReach-trqua3-v0, Time: 0:00:00.631499...
+3/4: Training starting for model PPO_PandaReach-trqua3-v0, Time: 0:00:00.831741...
+4/4: Training completed. Processing Time: 3:44:06.278413
+Time since start: 3:44:07.110278
+Job ID: 6708832
+Array Job ID: 6707237_6
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-03:23:39
+CPU Efficiency: 45.66% of 2-11:59:28 core-walltime
+Job Wall-clock time: 03:44:58
+Memory Utilized: 4.40 GB
+Memory Efficiency: 44.00% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

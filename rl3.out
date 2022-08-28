@@ -1,0 +1,705 @@
+1/4: Making Vector Enviroment for PPO_RandomPegCylinder-v0, Time: 0...
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+2/4: Making model for PPO_RandomPegCylinder-v0, Time: 0:00:00.269144...
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+3/4: Training starting for model PPO_RandomPegCylinder-v0, Time: 0:00:00.319071...
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(
+4/4: Training completed. Processing Time: 3:33:25.961513
+Time since start: 3:33:26.280630
+1/4: Making Vector Enviroment for PPO_PandaBall-v0, Time: 0...
+Process ForkProcess-8:
+Process ForkProcess-15:
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Process ForkProcess-5:
+Process ForkProcess-7:
+Process ForkProcess-6:
+Process ForkProcess-2:
+Process ForkProcess-9:
+Process ForkProcess-16:
+Process ForkProcess-14:
+Process ForkProcess-12:
+Process ForkProcess-3:
+Process ForkProcess-11:
+Process ForkProcess-1:
+Process ForkProcess-10:
+Process ForkProcess-4:
+Process ForkProcess-13:
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+Traceback (most recent call last):
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    env = env_fn_wrapper.var()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 80, in _init
+    env = gym.make(env_id, **env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 235, in make
+    return registry.make(id, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 129, in make
+    env = spec.make(**kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/envs/registration.py", line 90, in make
+    env = cls(**_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/gym_envs/ball.py", line 19, in __init__
+    PandaGymEnvironment.__init__(self, model_file, controller, action_interpolator,
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/panda_gym_env.py", line 61, in __init__
+    Environment.__init__(self, model_file, init_pos_jitter=init_pos_jitter, **model_kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 40, in __init__
+    self.build_model(kwargs)
+  File "/scratch/work/muffj1/panda-gym/panda_gym/core/env.py", line 97, in build_model
+    raise ValueError(f"Invalid mocap control type: {self.mocap_control}" \
+ValueError: Invalid mocap control type: mocapAvailable options: ['mocap_pos', 'mocap_pos_rotz', 'mocap_pos_rot']
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/sb3_rl/rl_multicore.py", line 49, in <module>
+    vec_env = make_vec_env(env_id, n_envs=num_cpu, vec_env_cls=SubprocVecEnv, vec_env_kwargs={'start_method':'fork'})
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/env_util.py", line 105, in make_vec_env
+    return vec_env_cls([make_env(i + start_index) for i in range(n_envs)], **vec_env_kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 111, in __init__
+    observation_space, action_space = self.remotes[0].recv()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 255, in recv
+    buf = self._recv_bytes()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+srun: error: skl20: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6609146.1
+1/4: Making Vector Enviroment for PPO_PandaFindBox-v0, Time: 0...
+2/4: Making model for PPO_PandaFindBox-v0, Time: 0:00:00.264760...
+3/4: Training starting for model PPO_PandaFindBox-v0, Time: 0:00:00.534724...
+Process ForkProcess-16:
+Process ForkProcess-1:
+Process ForkProcess-15:
+Process ForkProcess-2:
+Process ForkProcess-4:
+Process ForkProcess-3:
+Process ForkProcess-5:
+Process ForkProcess-9:
+Process ForkProcess-6:
+Process ForkProcess-7:
+Process ForkProcess-8:
+Process ForkProcess-13:
+Process ForkProcess-12:
+Process ForkProcess-14:
+Process ForkProcess-10:
+Process ForkProcess-11:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+Traceback (most recent call last):
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 52, in _worker
+    remote.send(getattr(env, data))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/gym/core.py", line 238, in __getattr__
+    return getattr(self.env, name)
+AttributeError: 'PandaBoxEnv' object has no attribute 'goal_reached_count'
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/sb3_rl/rl_multicore.py", line 61, in <module>
+    model.learn(n_timesteps, callback=callback)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 304, in learn
+    return super(PPO, self).learn(
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 217, in collect_rollouts
+    callback.on_rollout_end()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py", line 97, in on_rollout_end
+    self._on_rollout_end()
+  File "/scratch/work/muffj1/sb3_rl/sb_callbacks.py", line 38, in _on_rollout_end
+    goals_reached = np.sum(self.training_env.get_attr('goal_reached_count'))
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 287, in get_attr
+    return self.venv.get_attr(attr_name, indices)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 161, in get_attr
+    return [remote.recv() for remote in target_remotes]
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 161, in <listcomp>
+    return [remote.recv() for remote in target_remotes]
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 255, in recv
+    buf = self._recv_bytes()
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/multiprocessing/connection.py", line 388, in _recv
+    raise EOFError
+EOFError
+srun: error: skl20: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6609146.2
+Job ID: 6609146
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-02:41:00
+CPU Efficiency: 46.55% of 2-09:19:28 core-walltime
+Job Wall-clock time: 03:34:58
+Memory Utilized: 4.53 GB
+Memory Efficiency: 45.27% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

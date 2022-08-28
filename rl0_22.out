@@ -1,0 +1,18 @@
+1/4: Making Vector Enviroment for PPO_RandomPegBox-v0, Time: 0...
+2/4: Making model for PPO_RandomPegBox-v0, Time: 0:00:00.581265...
+3/4: Training starting for model PPO_RandomPegBox-v0, Time: 0:00:00.688766...
+4/4: Training completed. Processing Time: 2:09:06.159074
+Time since start: 2:09:06.847895
+Job ID: 6638814
+Array Job ID: 6638811_22
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 13:58:35
+CPU Efficiency: 40.35% of 1-10:38:08 core-walltime
+Job Wall-clock time: 02:09:53
+Memory Utilized: 4.52 GB
+Memory Efficiency: 45.21% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

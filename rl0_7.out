@@ -1,0 +1,18 @@
+1/4: Making Vector Enviroment for PPO_PandaReach-ImpCtrl-trpen0.5-v0, Time: 0...
+2/4: Making model for PPO_PandaReach-ImpCtrl-trpen0.5-v0, Time: 0:00:00.594434...
+3/4: Training starting for model PPO_PandaReach-ImpCtrl-trpen0.5-v0, Time: 0:00:00.674919...
+4/4: Training completed. Processing Time: 4:21:00.595568
+Time since start: 4:21:01.270537
+Job ID: 6708931
+Array Job ID: 6707237_7
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 1-03:23:32
+CPU Efficiency: 39.23% of 2-21:49:52 core-walltime
+Job Wall-clock time: 04:21:52
+Memory Utilized: 4.39 GB
+Memory Efficiency: 43.94% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

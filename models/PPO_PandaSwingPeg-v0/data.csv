@@ -1,0 +1,2 @@
+,task_reward,velocity_penalty,position_penalty,acceleration_penalty,velocity_over_limit,position_over_limit,acceleration_over_limit,control_penalty,net_reward,goals_reached
+0,2.8474717640791622,-0.04788219790557445,-0.22269620172521898,-0.731037041512864,0.00347900390625,0.147003173828125,0.064361572265625,-1.0016154411436573,1.8458563229355047,2

@@ -1,0 +1,44 @@
+1/4: Making Vector Enviroment for PPO_RandomPegBox-mocap-v0, Time: 0...
+2/4: Making model for PPO_RandomPegBox-mocap-v0, Time: 0:00:00.279481...
+3/4: Training starting for model PPO_RandomPegBox-mocap-v0, Time: 0:00:00.364802...
+Traceback (most recent call last):
+  File "/scratch/work/muffj1/sb3_rl/rl_multicore.py", line 61, in <module>
+    model.learn(n_timesteps, callback=callback)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 304, in learn
+    return super(PPO, self).learn(
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 169, in collect_rollouts
+    actions, values, log_probs = self.policy(obs_tensor)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/policies.py", line 589, in forward
+    latent_pi, latent_vf = self.mlp_extractor(features)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/stable_baselines3/common/torch_layers.py", line 230, in forward
+    return self.policy_net(shared_latent), self.value_net(shared_latent)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/work/muffj1/.conda_envs/pg/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (16x9 and 17x64)
+srun: error: skl2: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6639572.0
+Job ID: 6639572
+Array Job ID: 6639571_25
+Cluster: triton
+User/Group: muffj1/muffj1
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:19
+CPU Efficiency: 11.88% of 00:02:40 core-walltime
+Job Wall-clock time: 00:00:10
+Memory Utilized: 1.41 MB
+Memory Efficiency: 0.01% of 10.00 GB
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
