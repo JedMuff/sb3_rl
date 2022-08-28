@@ -44,15 +44,23 @@ class randomise_on_reset(VecEnvWrapper):
         return obs, reward, done, info
 
 if __name__ == '__main__':
+    time1 = time.time()
+    print(f'1/4: Making Vector Enviroment for {args.model}, Time: {0}...', flush=True)
     vec_env = make_vec_env(env_id, n_envs=num_cpu, vec_env_cls=SubprocVecEnv, vec_env_kwargs={'start_method':'fork'})
     vec_env = randomise_on_reset(vec_env)
     callback = CustomCallback(path=dir_model)
+    
+    time2 = time.time()
+    print(f'2/4: Making model for {args.model}, Time: {datetime.timedelta(seconds=time2-time1)}...', flush=True)
 
     model = algorithm("MlpPolicy", vec_env, verbose=0)
 
-    print(f'Training starting for model {args.model}...')
+    time3 = time.time()
+    print(f'3/4: Training starting for model {args.model}, Time: {datetime.timedelta(seconds=time3-time1)}...', flush=True)
     start_time = time.time()
     model.learn(n_timesteps, callback=callback)
-    total_time = time.time() - start_time
-    print('Training finished. Processing Time: ' + str(datetime.timedelta(seconds=total_time)))
+    finish_time = time.time()
+    total_time = finish_time - start_time
+    print('4/4: Training completed. Processing Time: ' + str(datetime.timedelta(seconds=total_time)), flush=True)
+    print(f'Time since start: {datetime.timedelta(seconds=finish_time-time1)}', flush=True)
     model.save(dir_model+args.model)

@@ -9,8 +9,9 @@ class CustomCallback(BaseCallback):
     def __init__(self, verbose=0, path='.', file_name='data'):
         super(CustomCallback, self).__init__(verbose)
 
-        self.dir_file_csv = path + file_name + '.csv'
-        
+        self.path = path
+        self.file_name = file_name
+
         if not(os.path.isdir(path)):
             os.mkdir(path)
 
@@ -59,6 +60,6 @@ class CustomCallback(BaseCallback):
         self.step_data = pd.DataFrame()
 
     def _on_training_end(self) -> None:
-        self.mean_rollout_data.to_csv('mean_'+self.dir_file_csv)
-        self.std_rollout_data.to_csv('std_'+self.dir_file_csv)
-        self.rollout_goal_reached_accuracy.to_csv('goals_'+self.dir_file_csv)
+        self.mean_rollout_data.to_csv(self.path + 'mean_'+self.file_name + '.csv')
+        self.std_rollout_data.to_csv(self.path + 'std_'+self.file_name + '.csv')
+        self.rollout_goal_reached_accuracy.to_csv(self.path + 'goals_'+self.file_name + '.csv')
